@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t emsikes/docker-k8s-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true emsikes/docker-k8s-react npm run test
