@@ -10,6 +10,7 @@ RUN npm run build
 # directory into the default static web serving location on the nginx server 
 # - resulting image will be base nginx with the /app/build contents
 FROM nginx 
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
 
