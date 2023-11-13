@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run -e CI=true emsikes/docker-k8s-react npm run test
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: "$AWS_SECRET_KEY
+deply:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-nodej-testapp"
+  env: "Docker-nodej-testapp-env"
+  bucket_name: "elasticbeanstalk-us-east-1-761202917843"
+  bucket_path: "docker-nodej-testapp"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
