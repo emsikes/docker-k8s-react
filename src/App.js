@@ -9,6 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
           Hello, World!  Testing with Elastic Beanstalk....
+          Changed on the feature branch!
         </p>
         <a
           className="App-link"
